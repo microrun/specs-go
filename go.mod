@@ -1,4 +1,4 @@
-module microrun.org/specs-go
+module github.com/microrun/specs-go
 
 go 1.18
 
