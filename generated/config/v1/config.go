@@ -35,6 +35,8 @@ type Config struct {
 
 // Provider defines model for Provider.
 type Provider struct {
+	// Provider URI pointing to the provider implementation
+	// Supported protocols: file:// and git over https://
 	Provider string `json:"provider"`
 }
 
