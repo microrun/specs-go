@@ -9,7 +9,10 @@ import (
 
 // App defines model for App.
 type App struct {
-	Build App_Build `json:"build"`
+	Build    App_Build `json:"build"`
+	Provider *struct {
+		Use *string `json:"use,omitempty"`
+	} `json:"provider,omitempty"`
 }
 
 // App_Build defines model for App.Build.
