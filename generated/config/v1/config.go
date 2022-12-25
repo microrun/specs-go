@@ -9,15 +9,18 @@ import (
 
 // App defines model for App.
 type App struct {
-	Build    App_Build `json:"build"`
-	Provider *struct {
-		Use *string `json:"use,omitempty"`
-	} `json:"provider,omitempty"`
+	Build    App_Build    `json:"build"`
+	Provider *AppProvider `json:"provider,omitempty"`
 }
 
 // App_Build defines model for App.Build.
 type App_Build struct {
 	union json.RawMessage
+}
+
+// AppProvider defines model for AppProvider.
+type AppProvider struct {
+	Use *string `json:"use,omitempty"`
 }
 
 // BuildDockerfile defines model for BuildDockerfile.
